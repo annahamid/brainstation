@@ -1,0 +1,24 @@
+
+//Since a number is either even or odd, we can use a binary IF statement. We can determine whether a number is even or odd using the modulo operator.
+//Declare function:
+function isEven(number) {
+ // There is a possibility that a non-number is inputted. in this case, we use parsefloat and the following message will be displayed:
+   if(isNaN(number)){
+    console.log ("This is not a number");
+//else ,the input is a number, and if it does NOT have a remainder of 2,it quaifies as an even number 
+  } else if(number %2 == 0){
+    console.log ("This number is even"); 
+    //else, it qualifies as an odd number:
+  } else {
+    console.log ("This number is odd");
+  }
+};
+// All possibilities have been satified since numbers are either odd or even and this function also accounts for input that may not be numbers.
+
+
+//testing...
+isEven (2);
+isEven(42);
+isEven(7853);
+isEven("food"); //I noticed that my code returns an error when I don't use quotation marks... I'm not so confident that I've covered all types of input..
+isEven(-0.234);
